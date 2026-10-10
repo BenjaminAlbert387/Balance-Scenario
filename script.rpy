@@ -8,15 +8,19 @@ default communication_score = 0
 default responsibility_score = 0
 
 screen confidence_ui():
-    frame:
+    vbox:
         xalign 0.98
         yalign 0.02
+        spacing 5
 
-        padding (10, 5)
+        frame:
+            text "Boundary Score: [boundary_score]"
 
-        text "Boundary Score: [boundary_score]"
-        text "Communication Score: [communication_score]"
-        text "Responsibility Score: [responsibility_score]"
+        frame:
+            text "Communication Score: [communication_score]"
+
+        frame:
+            text "Responsibility Score: [responsibility_score]"
 
 label start:
 
@@ -32,4 +36,3 @@ label start:
 
     "Balancing Commitments and Wellbeing: Scenario Start"
 
-    
