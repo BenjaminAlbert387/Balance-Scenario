@@ -158,7 +158,7 @@ label start:
 
     a "What do you think we should do?"
 
-        menu:
+    menu:
             "How do you handle the growing workload?"
 
             "Take ownership of the entire proposal so Person A doesn't feel pressured.":
@@ -246,7 +246,7 @@ label start:
 
     y "{i}Being responsible means taking the charity seriously. It also means being honest about the quality and amount of work I can deliver.{/i}"
 
-        menu:
+    menu:
             "What do you agree to do?"
 
             "Promise to review the whole document tomorrow, regardless of your workload.":
