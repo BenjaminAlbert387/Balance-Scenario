@@ -87,7 +87,7 @@ label start:
     "You pause before replying."
 
     menu:
-        "How do you respond to Person A?"
+            "How do you respond to Person A?"
 
             "Agree to do it all, even though the deadline is unrealistic.":
                 $ boundary_score += -2
@@ -158,8 +158,8 @@ label start:
 
     a "What do you think we should do?"
 
-    menu:
-        "How do you handle the growing workload?"
+        menu:
+            "How do you handle the growing workload?"
 
             "Take ownership of the entire proposal so Person A doesn't feel pressured.":
                 $ boundary_score += -1
@@ -246,8 +246,8 @@ label start:
 
     y "{i}Being responsible means taking the charity seriously. It also means being honest about the quality and amount of work I can deliver.{/i}"
 
-    menu:
-        "What do you agree to do?"
+        menu:
+            "What do you agree to do?"
 
             "Promise to review the whole document tomorrow, regardless of your workload.":
                 $ boundary_score += -3
@@ -326,21 +326,21 @@ label start:
 
         "Setting boundaries is not selfish. It helps you make commitments you can actually fulfil."
         
-        elif boundary_score == 0:
-            "Based on your chosen responses, you showed some awareness of your limits."
+    elif boundary_score == 0:
+        "Based on your chosen responses, you showed some awareness of your limits."
 
-            "But, your decisions did not consistently demonstrate effective boundary-setting."
+        "But, your decisions did not consistently demonstrate effective boundary-setting."
 
-            "Advice: Practise distinguishing between what you would like to do and what you can realistically do." 
+        "Advice: Practise distinguishing between what you would like to do and what you can realistically do." 
             
-            "Offer specific, manageable contributions rather than making open-ended promises."
+        "Offer specific, manageable contributions rather than making open-ended promises."
 
-        else:
-            "You demonstrated an ability to recognise your limits and set realistic expectations around your commitments."
+    else:
+        "You demonstrated an ability to recognise your limits and set realistic expectations around your commitments."
 
-            "Advice: Continue communicating your capacity early." 
+        "Advice: Continue communicating your capacity early." 
             
-            "Remember that setting a boundary works best when you also help identify a practical way forward."
+        "Remember that setting a boundary works best when you also help identify a practical way forward."
 
     if communication_score < 0:
         "Based on your chosen responses, you may not always be fully clear to other people."
@@ -351,19 +351,19 @@ label start:
         
         "Explain what you can do, what you cannot do, and when others should expect an update."
 
-        elif communication_score == 0:
-            "Based on your chosen responses, you showed some confidence communicating to other people."
+    elif communication_score == 0:
+        "Based on your chosen responses, you showed some confidence communicating to other people."
 
-            "Advice: Ask questions before making commitments." 
+        "Advice: Ask questions before making commitments." 
             
-            "If a deadline is at risk, raise the issue early rather than waiting until the situation becomes urgent."
+        "If a deadline is at risk, raise the issue early rather than waiting until the situation becomes urgent."
 
-        else:
-            "Based on your chosen responses, you demonstrated constructive communication by and discussing expectations with others."
+    else:
+        "Based on your chosen responses, you demonstrated constructive communication by and discussing expectations with others."
 
-            "Advice: Keep communication collaborative and explain your position." 
+        "Advice: Keep communication collaborative and explain your position." 
             
-            "Also, listen to other perspectives, and agree on clear next steps wherever possible."
+        "Also, listen to other perspectives, and agree on clear next steps wherever possible."
 
     if responsibility_score < 0:
         "Based on your chosen responses, you may not have adequately considered the impact of your actions on others."
@@ -372,21 +372,21 @@ label start:
         
         "When you cannot take on a task, communicate this promptly and help identify alternatives where possible."
 
-        elif responsibility_score == 0:
-            "Based on your chosen responses, you considered some of the charity's needs."
+    elif responsibility_score == 0:
+        "Based on your chosen responses, you considered some of the charity's needs."
 
-            "There may have been opportunities to share responsibility or plan more effectively."
+        "There may have been opportunities to share responsibility or plan more effectively."
 
-            "Advice: Focus on solutions rather than simply accepting or rejecting tasks." 
+        "Advice: Focus on solutions rather than simply accepting or rejecting tasks." 
             
-            "Clarify priorities, involve relevant  staff and agree who is responsible for each action."
+        "Clarify priorities, involve relevant  staff and agree who is responsible for each action."
 
-        else:
-            "You demonstrated consideration for the charity's needs while recognising that responsibility should be shared."
+    else:
+        "You demonstrated consideration for the charity's needs while recognising that responsibility should be shared."
 
-            "Advice: Continue balancing organisational priorities with individual capacity." 
+        "Advice: Continue balancing organisational priorities with individual capacity." 
             
-            "Effective leadership means supporting the charity without assuming that one person must solve every problem."
+        "Effective leadership means supporting the charity without assuming that one person must solve every problem."
 
     "Human-centred leadership is not about always saying yes, or always protecting your own time." 
     
