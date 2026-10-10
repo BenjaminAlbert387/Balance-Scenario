@@ -304,7 +304,7 @@ label start:
 
     a "It's difficult to balance everything. The charity matters, but so do the people doing the work."
 
-    y "{i}That's probably the point I needed to remember. A charity doesn't benefit from  s who exhaust themselves trying to prove they're committed.{/i}"
+    y "{i}That's probably the point I needed to remember. A charity doesn't benefit from staff who exhaust themselves trying to prove they're committed.{/i}"
 
     y "{i}But boundaries aren't an excuse to disengage, either. Other people depend on us, and we need to communicate, share responsibility and make decisions that protect the work we're here to do.{/i}"
 
