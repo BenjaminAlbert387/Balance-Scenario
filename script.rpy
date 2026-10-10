@@ -89,7 +89,7 @@ label start:
     menu:
         "How do you respond to Person A?":
 
-            "Agree to do it all, even though the deadline is unrealistic.":
+            "Agree to do it all, even though the deadline is unrealistic."
                 $ boundary_score += -2
                 $ communication_score += -1
                 $ responsibility_score += 2
@@ -102,7 +102,7 @@ label start:
 
                 y "{i}I've agreed without checking what I can realistically deliver. I might pull it off, but I've made a promise before understanding the full cost.{/i}"
 
-            "Explain your deadline and ask what the highest-priority tasks are.":
+            "Explain your deadline and ask what the highest-priority tasks are."
                 $ boundary_score += 2
                 $ communication_score += 2
                 $ responsibility_score += 1
@@ -115,7 +115,7 @@ label start:
 
                 y "{i}It's uncomfortable to say no to part of a request. But explaining what I can do is more useful than making a promise I might break.{/i}"
 
-            "Tell Person A that the proposal is their problem to solve.":
+            "Tell Person A that the proposal is their problem to solve."
                 $ boundary_score += 1
                 $ communication_score += -1
                 $ responsibility_score += -2
@@ -161,7 +161,7 @@ label start:
     menu:
         "How do you handle the growing workload?":
 
-            "Take ownership of the entire proposal so Person A doesn't feel pressured.":
+            "Take ownership of the entire proposal so Person A doesn't feel pressured."
                 $ boundary_score += -1
                 $ communication_score += 0
                 $ responsibility_score += 2
@@ -172,7 +172,7 @@ label start:
 
                 y "{i}I'm trying to help, but I may have replaced one person's problem with two people's problems. If I cannot finish the work, the charity still has a problem, and now my other commitments are at risk too.{/i}"
 
-            "Discuss what can realistically be completed and notify the relevant  s.":
+            "Discuss what can realistically be completed and notify the relevant  s."
                 $ boundary_score += 1
                 $ communication_score += 1
                 $ responsibility_score += 1
@@ -189,7 +189,7 @@ label start:
 
                 y "{i}This feels more constructive. I'm not abandoning the task, but I'm not pretending I can solve everything alone either.{/i}"
 
-            "Tell Person A to stop worrying and just work harder.":
+            "Tell Person A to stop worrying and just work harder."
                 $ boundary_score += 0
                 $ communication_score += -1
                 $ responsibility_score += 0
@@ -249,7 +249,7 @@ label start:
     menu:
         "What do you agree to do?":
 
-            "Promise to review the whole document tomorrow, regardless of your workload.":
+            "Promise to review the whole document tomorrow, regardless of your workload."
                 $ boundary_score += -3
                 $ communication_score += 0
                 $ responsibility_score += 3
@@ -260,7 +260,7 @@ label start:
 
                 y "{i}I have made another promise without checking the actual workload. I might manage it, but I have left no room for unexpected problems.{/i}"
 
-            "Offer a defined amount of time and agree on priorities.":
+            "Offer a defined amount of time and agree on priorities."
                 $ boundary_score += 1
                 $ communication_score += 1
                 $ responsibility_score += 1
@@ -277,7 +277,7 @@ label start:
 
                 y "{i}A specific offer is more useful than a vague promise. It gives Person A something they can actually plan around.{/i}"
 
-            "Withdraw from the task entirely without discussing alternatives.":
+            "Withdraw from the task entirely without discussing alternatives."
                 $ boundary_score += 2
                 $ communication_score += -1
                 $ responsibility_score += -2
