@@ -14,13 +14,13 @@ screen confidence_ui():
         spacing 5
 
         frame:
-            text "Boundary Score: [boundary_score]"
+            text "Boundary Score (Recognises personal capacity and avoids overcommitting): [boundary_score]"
 
         frame:
-            text "Communication Score: [communication_score]"
+            text "Communication Score (Informs others early and explains constraints constructively): [communication_score]"
 
         frame:
-            text "Responsibility Score: [responsibility_score]"
+            text "Team Responsibility Score (Manages the impact on the charity): [responsibility_score]"
 
 label start:
 
