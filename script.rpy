@@ -90,9 +90,9 @@ label start:
         "How do you respond to Person A?":
 
             "Agree to do it all, even though the deadline is unrealistic.":
-                $ boundary_score += -1
-                $ communication_score += 0
-                $ responsibility_score += 0
+                $ boundary_score += -2
+                $ communication_score += -1
+                $ responsibility_score += 2
 
                 y "Sure. Send everything over. I'll get it done by Wednesday."
 
@@ -116,9 +116,9 @@ label start:
                 y "{i}It's uncomfortable to say no to part of a request. But explaining what I can do is more useful than making a promise I might break.{/i}"
 
             "Tell Person A that the proposal is their problem to solve.":
-                $ boundary_score += 2
-                $ communication_score += 0
-                $ responsibility_score += 0
+                $ boundary_score += 1
+                $ communication_score += -1
+                $ responsibility_score += -2
 
                 y "I'm busy with my own deadlines. You'll need to find someone else."
 
@@ -162,9 +162,9 @@ label start:
         "How do you handle the growing workload?":
 
             "Take ownership of the entire proposal so Person A doesn't feel pressured.":
-                $ boundary_score += 0
-                $ communication_score += 1
-                $ responsibility_score += 1
+                $ boundary_score += -1
+                $ communication_score += 0
+                $ responsibility_score += 2
 
                 y "I'll take over the proposal and try to get it finished. We can discuss the details later."
 
@@ -173,9 +173,9 @@ label start:
                 y "{i}I'm trying to help, but I may have replaced one person's problem with two people's problems. If I cannot finish the work, the charity still has a problem, and now my other commitments are at risk too.{/i}"
 
             "Discuss what can realistically be completed and notify the relevant Trustees.":
-                $ boundary_score += 2
-                $ communication_score += 2
-                $ responsibility_score += 2
+                $ boundary_score += 1
+                $ communication_score += 1
+                $ responsibility_score += 1
 
                 y "Let's list what actually needs to be finished before Friday and what can wait. We should also let the relevant Trustees know that the budget figures are unresolved."
 
@@ -191,7 +191,7 @@ label start:
 
             "Tell Person A to stop worrying and just work harder.":
                 $ boundary_score += 0
-                $ communication_score += 0
+                $ communication_score += -1
                 $ responsibility_score += 0
 
                 y "We've all got deadlines. We just need to push through and get it done."
@@ -250,9 +250,9 @@ label start:
         "What do you agree to do?":
 
             "Promise to review the whole document tomorrow, regardless of your workload.":
-                $ boundary_score += 0
+                $ boundary_score += -3
                 $ communication_score += 0
-                $ responsibility_score += 1
+                $ responsibility_score += 3
 
                 y "Yes, I'll review the whole thing tomorrow. Send it over and I'll fit it in."
 
@@ -261,9 +261,9 @@ label start:
                 y "{i}I have made another promise without checking the actual workload. I might manage it, but I have left no room for unexpected problems.{/i}"
 
             "Offer a defined amount of time and agree on priorities.":
-                $ boundary_score += 2
-                $ communication_score += 2
-                $ responsibility_score += 2
+                $ boundary_score += 1
+                $ communication_score += 1
+                $ responsibility_score += 1
 
                 y "I can set aside an hour tomorrow evening after my work report is submitted. If you send the document in the morning, I'll focus on checking the sections that still need attention."
 
@@ -279,8 +279,8 @@ label start:
 
             "Withdraw from the task entirely without discussing alternatives.":
                 $ boundary_score += 2
-                $ communication_score += 0
-                $ responsibility_score += 0
+                $ communication_score += -1
+                $ responsibility_score += -2
 
                 y "I can't do it. I've got too much going on."
 
@@ -315,6 +315,58 @@ label start:
     a "A plan is a start."
 
     y "{i}A plan, a calendar, and possibly a second mug of tea. The foundations of responsible leadership.{/i}"
+
+    # Personal endings
+    "Your decisions have shaped how you managed your commitments, communicated with others, and supported the charity."
+
+    if boundary_score < 0:
+        "Based on your chosen responses, you may have a tendency to overcommit without realising."
+
+        "Advice: Before committing to a task, assess your existing workload and be honest about your availability."
+
+        "Setting boundaries is not selfish. It helps you make commitments you can actually fulfil."
+        
+        else if boundary_score == 0:
+            "Based on your chosen responses, you showed some awareness of your limits."
+
+            "But, your decisions did not consistently demonstrate effective boundary-setting."
+
+            "Advice: Practise distinguishing between what you would like to do and what you can realistically do." 
+            
+            "Offer specific, manageable contributions rather than making open-ended promises."
+
+        else:
+            "You demonstrated an ability to recognise your limits and set realistic expectations around your commitments."
+
+            "Advice: Continue communicating your capacity early." 
+            
+            "Remember that setting a boundary works best when you also help identify a practical way forward."
+
+    if communication_score < 0:
+        "Based on your chosen responses, you may not always be fully clear to other people."
+
+        "Your decisions may have left others uncertain about your availability, priorities, or the support you could provide."
+
+        "Advice: Communicate early and directly when difficulties arise." 
+        
+        "Explain what you can do, what you cannot do, and when others should expect an update."
+
+        else if communication_score == 0:
+            "Based on your chosen responses, you showed some confidence communicating to other people."
+
+            "Advice: Ask questions before making commitments." 
+            
+            "If a deadline is at risk, raise the issue early rather than waiting until the situation becomes urgent."
+
+        else:
+            "Based on your chosen responses, you demonstrated constructive communication by and discussing expectations with others."
+
+            "Advice: Keep communication collaborative and explain your position." 
+            
+            "Also, listen to other perspectives, and agree on clear next steps wherever possible."
+
+    if responsibility_score < 0:
+
 
     "You close your laptop."
 
