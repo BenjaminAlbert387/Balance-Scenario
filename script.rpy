@@ -26,7 +26,7 @@ label start:
 
     show screen confidence_ui
 
-    "Welcome! To continue, please press left click on your mouse while your cursor is on the game."
+    "Welcome! To continue, please press left click on your mouse / tap your mousepad while your cursor is on the game."
 
     "Great! This is a simulated scenario based on Balancing Commitments and Wellbeing."
 
@@ -48,7 +48,7 @@ label start:
 
     y "{i}Right. Let's assess the situation rationally.{/i}"
 
-    y "{i}I have a university assignment due Wednesday. I have a work deadline on Thursday. And I promised the charity that I would review a document before Friday's trustee meeting.{/i}"
+    y "{i}I have a university assignment due Wednesday. I have a work deadline on Thursday. And I promised the charity that I would review a document before Friday's meeting.{/i}"
 
     y "{i}Three perfectly reasonable commitments. Individually manageable. Collectively, apparently a government experiment designed to discover how much stress one human being can absorb.{/i}"
 
@@ -82,7 +82,7 @@ label start:
 
     y "{i}And that's the difficult part. This isn't meaningless admin. The proposal matters. People are relying on us to make sensible decisions and use the charity's resources properly.{/i}"
 
-    y "{i}But my other commitments matter too. I volunteered to be a Trustee, not to become a person who survives exclusively on caffeine and calendar notifications.{/i}"
+    y "{i}But my other commitments matter too. I do not want to become a person who survives exclusively on caffeine and calendar notifications.{/i}"
 
     "You pause before replying."
 
@@ -144,7 +144,7 @@ label start:
 
     y "{i}I could ignore the call and protect my afternoon. I could agree to take over the whole proposal. Or I could help establish what is actually possible before anyone makes another promise.{/i}"
 
-    y "Have you spoken to the other Trustees about the missing figures?"
+    y "Have you spoken to the others about the missing figures?"
 
     a "Not yet. I didn't want to worry everyone before I had a solution."
 
@@ -172,12 +172,12 @@ label start:
 
                 y "{i}I'm trying to help, but I may have replaced one person's problem with two people's problems. If I cannot finish the work, the charity still has a problem, and now my other commitments are at risk too.{/i}"
 
-            "Discuss what can realistically be completed and notify the relevant Trustees.":
+            "Discuss what can realistically be completed and notify the relevant  s.":
                 $ boundary_score += 1
                 $ communication_score += 1
                 $ responsibility_score += 1
 
-                y "Let's list what actually needs to be finished before Friday and what can wait. We should also let the relevant Trustees know that the budget figures are unresolved."
+                y "Let's list what actually needs to be finished before Friday and what can wait. We should also let the others know that the budget figures are unresolved."
 
                 y "That gives us a chance to divide the work properly instead of hoping someone can absorb it all."
 
@@ -210,7 +210,7 @@ label start:
 
     "Another message appears from Person A."
 
-    a "I've updated the group. One Trustee can check the figures tomorrow, and another can review the impact section. Could you look over the final document on Thursday evening?"
+    a "I've updated the group. One person can check the figures tomorrow, and another can review the impact section. Could you look over the final document on Thursday evening?"
 
     y "{i}Thursday evening. My work report is due that day. I don't know how long the revisions will take.{/i}"
 
@@ -238,13 +238,13 @@ label start:
 
     y "It's submitted. I'm relieved, but I've still got my work report to finish."
 
-    a "I'm glad you got it done. The other Trustees have checked the figures, and the proposal is nearly ready. We still need someone to check the final version."
+    a "I'm glad you got it done. The others have checked the figures, and the proposal is nearly ready. We still need someone to check the final version."
 
     a "Would you have time tomorrow, if I send it over in the morning?"
 
     y "{i}I want to help. I also know that saying yes now could create another deadline I cannot meet. The final document might need a quick proofread, or it might need another four hours of work.{/i}"
 
-    y "{i}Being a responsible Trustee means taking the charity seriously. It also means being honest about the quality and amount of work I can deliver.{/i}"
+    y "{i}Being responsible means taking the charity seriously. It also means being honest about the quality and amount of work I can deliver.{/i}"
 
     menu:
         "What do you agree to do?":
@@ -304,7 +304,7 @@ label start:
 
     a "It's difficult to balance everything. The charity matters, but so do the people doing the work."
 
-    y "{i}That's probably the point I needed to remember. A charity doesn't benefit from Trustees who exhaust themselves trying to prove they're committed.{/i}"
+    y "{i}That's probably the point I needed to remember. A charity doesn't benefit from  s who exhaust themselves trying to prove they're committed.{/i}"
 
     y "{i}But boundaries aren't an excuse to disengage, either. Other people depend on us, and we need to communicate, share responsibility and make decisions that protect the work we're here to do.{/i}"
 
@@ -366,10 +366,36 @@ label start:
             "Also, listen to other perspectives, and agree on clear next steps wherever possible."
 
     if responsibility_score < 0:
+        "Based on your chosen responses, you may not have adequately considered the impact of your actions on others."
 
+        "Advice: Consider who depends on the work being completed." 
+        
+        "When you cannot take on a task, communicate this promptly and help identify alternatives where possible."
+
+        else if responsibility_score == 0:
+            "Based on your chosen responses, you considered some of the charity's needs."
+
+            "There may have been opportunities to share responsibility or plan more effectively."
+
+            "Advice: Focus on solutions rather than simply accepting or rejecting tasks." 
+            
+            "Clarify priorities, involve relevant  staff and agree who is responsible for each action."
+
+        else:
+            "You demonstrated consideration for the charity's needs while recognising that responsibility should be shared."
+
+            "Advice: Continue balancing organisational priorities with individual capacity." 
+            
+            "Effective leadership means supporting the charity without assuming that one person must solve every problem."
+
+    "Human-centred leadership is not about always saying yes, or always protecting your own time." 
+    
+    "It is about making considered decisions that respect both people and responsibilities."
 
     "You close your laptop."
 
     "For once, tomorrow's to-do list contains a realistic number of tasks."
+
+    "Simulated Scenario Finished! Press left click on your mouse / tap your mousepad to return to the menu."
 
     return
