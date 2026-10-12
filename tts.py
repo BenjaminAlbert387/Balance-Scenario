@@ -5,7 +5,10 @@ import os
 # ===== CONFIGURE =====
 API_KEY = "sk_0f329d884248fd891097cbb5536d7e7e4e75abce1bee522f"
 VOICE_ID = "hpp4J3VqNfWAUOO0d1Us"
-CSV_FILE = "dialogue_4.csv"  #CSV in the format (Text, ID)
+
+# JBFqnCBsd6RMkjVDRZzb Voice: George
+
+CSV_FILE = "blank_character.csv"  #CSV in the format (Text, ID)
 OUTPUT_DIR = "voice_lines"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
