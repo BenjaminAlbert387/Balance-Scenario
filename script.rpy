@@ -7,6 +7,7 @@ default boundary_score = 0
 default communication_score = 0
 default responsibility_score = 0
 
+# Displays scores in the top of the screen
 screen confidence_ui():
     vbox:
         xalign 0.98
