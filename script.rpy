@@ -191,7 +191,7 @@ label start:
     play sound "voice_lines/48.mp3"
     y "{i}There it is. The problem has grown while I've been trying to keep everything else moving.{/i}"
 
-    play sound "voice_lines/45.mp3"
+    play sound "voice_lines/49.mp3"
     y "{i}I could ignore the call and protect my afternoon. I could agree to take over the whole proposal. Or I could help establish what is actually possible before anyone makes another promise.{/i}"
 
     play sound "voice_lines/50.mp3"
