@@ -99,7 +99,7 @@ label start:
     y "I might be able to help. How much work do you think it is?"
 
     play sound "voice_lines/24.mp3"
-    a "A few hours, probably. Maybe four if the figures are a mess."
+    a "A few hours, probably. Maybe four, if the figures are a mess."
 
     play sound "voice_lines/25.mp3"
     y "{i}Four hours. That's almost a whole evening, assuming time has stopped existing for food, sleep and basic hygiene.{/i}"
